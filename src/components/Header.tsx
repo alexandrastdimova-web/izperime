@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.jpg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,9 +27,12 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full bg-background border-b border-border shadow-sm">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <div className="flex items-center">
-          <h1 className="text-2xl font-bold text-foreground">
-            izperi<span className="text-primary">.me</span>
-          </h1>
+          <img 
+            src={logo} 
+            alt="izperi.me лого" 
+            className="h-12 w-auto cursor-pointer" 
+            onClick={() => scrollToSection("hero")}
+          />
         </div>
 
         {/* Desktop Navigation */}

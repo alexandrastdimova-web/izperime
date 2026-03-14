@@ -7,7 +7,7 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-1">
               izperi<span className="text-primary">.me</span>
             </h3>
-            <p className="text-sm opacity-80">Професионално почистване от 2024</p>
+            <p className="text-sm opacity-80">Професионално почистване от 2023</p>
           </div>
           
           <div className="text-center text-sm opacity-80">

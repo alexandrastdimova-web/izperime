@@ -1,28 +1,14 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
 
 const Prices = () => {
   const priceItems = [
-    {
-      title: "Пране на диван",
-      price: "от 25 лв.",
-      features: ["Двуместен диван", "Дълбоко почистване", "Еко препарати"],
-    },
-    {
-      title: "Пране на килими",
-      price: "от 3 лв./кв.м",
-      features: ["Всякакви размери", "Премахване на петна", "Бърза услуга"],
-    },
-    {
-      title: "Пране на матрак",
-      price: "от 20 лв.",
-      features: ["Едностранно пране", "Хигиенизация", "Противоалергенно"],
-    },
-    {
-      title: "Пране на авто салон",
-      price: "от 40 лв.",
-      features: ["Седалки и таван", "Килимчета", "Багажник"],
-    },
+    "Пране на стандартен триместен диван — от 35 до 45 евро",
+    "Пране на едностранен двоен матрак — от 38 до 48 евро",
+    "Пране на автомобилен салон (седалки + под + багажник) — от 70 до 120 евро",
+    "Пране само на автомобилни седалки — 12 евро / брой",
+    "Пране на стол с текстилна тапицерия — от 4 до 8 евро",
+    "Пране на детски матрак — от 20 до 30 евро",
+    "Пране на килими — цена по договаряне",
   ];
 
   return (
@@ -32,39 +18,31 @@ const Prices = () => {
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
             Цени
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Прозрачни цени без скрити разходи
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Цената за изпиране на всеки диван, матрак или автомобилен салон зависи от неговия размер и степента на замърсяване. Посочените по-долу цени са в ориентировъчни диапазони, точна цена ще ви дадем след оглед на място или след като ни изпратите подробности и снимки.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          {priceItems.map((item, index) => (
-            <Card
-              key={index}
-              className="border-2 hover:border-primary transition-all hover:shadow-lg rounded-2xl"
-            >
-              <CardHeader className="text-center">
-                <CardTitle className="text-2xl mb-2">{item.title}</CardTitle>
-                <CardDescription className="text-3xl font-bold text-primary">
-                  {item.price}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2">
-                  {item.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center gap-2">
-                      <Check className="w-5 h-5 text-primary flex-shrink-0" />
-                      <span className="text-sm text-muted-foreground">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="max-w-2xl mx-auto">
+          <Card className="border-2 hover:border-primary transition-all hover:shadow-lg rounded-2xl">
+            <CardContent className="p-8">
+              <ul className="space-y-4">
+                {priceItems.map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex items-start gap-3 text-foreground"
+                  >
+                    <span className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
         </div>
 
-        <p className="text-center text-muted-foreground mt-8 text-sm">
-          * Цените са ориентировъчни и зависят от състоянието и размера на обекта
+        <p className="text-center text-muted-foreground mt-8 text-sm max-w-2xl mx-auto">
+          Ако не намирате точна цена за това, което желаете да бъде изпрано, моля свържете се с нас по телефона, за да обсъдим вашите нужди и да ви дадем точна цена.
         </p>
       </div>
     </section>

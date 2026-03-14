@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Contact = () => {
@@ -6,25 +6,13 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Телефон",
-      content: "+359 XXX XXX XXX",
-      action: "tel:+359XXXXXXXXX",
-    },
-    {
-      icon: Mail,
-      title: "Имейл",
-      content: "info@izperi.me.bg",
-      action: "mailto:info@izperi.me.bg",
+      content: "+359 884 555 884",
+      action: "tel:+359884555884",
     },
     {
       icon: MapPin,
       title: "Адрес",
-      content: "София, България",
-      action: null,
-    },
-    {
-      icon: Clock,
-      title: "Работно време",
-      content: "Понеделник - Неделя: 8:00 - 20:00",
+      content: "гр. Велико Търново, ж.к. Бузлуджа, ул. Георги Измирлиев 17",
       action: null,
     },
   ];
@@ -41,7 +29,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
           {contactInfo.map((item, index) => {
             const Icon = item.icon;
             return (
@@ -68,13 +56,17 @@ const Contact = () => {
           })}
         </div>
 
+        <p className="text-center text-muted-foreground mt-8 max-w-3xl mx-auto">
+          Работим във Велико Търново и региона. Прането на мека мебел извършваме на място във вашия дом или офис, а автомобилните салони почистваме в нашата база на ул. Георги Измирлиев 17, ж.к. Бузлуджа.
+        </p>
+
         <div className="text-center mt-12">
           <Button
             size="lg"
             className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all"
             asChild
           >
-            <a href="tel:+359XXXXXXXXX">Обади ни се сега</a>
+            <a href="tel:+359884555884">Обади ни се сега</a>
           </Button>
         </div>
       </div>

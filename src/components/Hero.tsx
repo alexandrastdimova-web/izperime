@@ -22,10 +22,10 @@ const Hero = () => {
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-3xl">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
-            Професионално пране на мека мебел, килими и авто салони
+            Професионално пране на дивани, матраци, мека мебел, автомобилни салони и детайлинг за автомобили
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-            Дълбоко почистване за домове, офиси и автомобили.
+            Професионално пране на мека мебел във Велико Търново и региона – на място във вашия дом, а за автомобили – в нашата база на ул. Георги Измирлиев 17, ж.к. Бузлуджа.
           </p>
           <Button
             onClick={scrollToContact}

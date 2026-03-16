@@ -1,13 +1,7 @@
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
+User-agent: Facebot
 Allow: /
 
 User-agent: *

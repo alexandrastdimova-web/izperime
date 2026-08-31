@@ -61,6 +61,16 @@ const ServicePage = () => {
     ],
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: service.faq.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer },
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
@@ -73,6 +83,7 @@ const ServicePage = () => {
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
       <header className="sticky top-0 z-50 w-full bg-background border-b border-border shadow-sm">

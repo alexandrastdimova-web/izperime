@@ -74,16 +74,16 @@ for (const service of services) {
   };
 
   const head = [
-    `<title>${escapeAttr(service.title)}</title>`,
-    `<meta name="description" content="${escapeAttr(service.description)}" />`,
-    `<link rel="canonical" href="${url}" />`,
-    `<meta property="og:title" content="${escapeAttr(service.title)}" />`,
-    `<meta property="og:description" content="${escapeAttr(service.description)}" />`,
-    `<meta property="og:url" content="${url}" />`,
-    `<meta property="og:type" content="website" />`,
-    `<script type="application/ld+json">${escapeJson(serviceSchema)}</script>`,
-    `<script type="application/ld+json">${escapeJson(breadcrumbSchema)}</script>`,
-    `<script type="application/ld+json">${escapeJson(faqSchema)}</script>`,
+    `<title data-rh="true">${escapeAttr(service.title)}</title>`,
+    `<meta data-rh="true" name="description" content="${escapeAttr(service.description)}" />`,
+    `<link data-rh="true" rel="canonical" href="${url}" />`,
+    `<meta data-rh="true" property="og:title" content="${escapeAttr(service.title)}" />`,
+    `<meta data-rh="true" property="og:description" content="${escapeAttr(service.description)}" />`,
+    `<meta data-rh="true" property="og:url" content="${url}" />`,
+    `<meta data-rh="true" property="og:type" content="website" />`,
+    `<script data-rh="true" type="application/ld+json">${escapeJson(serviceSchema)}</script>`,
+    `<script data-rh="true" type="application/ld+json">${escapeJson(breadcrumbSchema)}</script>`,
+    `<script data-rh="true" type="application/ld+json">${escapeJson(faqSchema)}</script>`,
   ].join("\n    ");
 
   // Drop the homepage-specific head tags so the route page has exactly one

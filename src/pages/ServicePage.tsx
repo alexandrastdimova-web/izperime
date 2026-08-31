@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Check, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -9,8 +9,8 @@ import logo from "@/assets/logo.jpg";
 import { SITE_URL, getService, services } from "@/data/services";
 
 const ServicePage = () => {
-  const { slug } = useParams<{ slug: string }>();
-  const service = slug ? getService(slug) : undefined;
+  const { pathname } = useLocation();
+  const service = getService(pathname.replace(/^\/+|\/+$/g, ""));
 
   if (!service) return <NotFound />;
 

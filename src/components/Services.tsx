@@ -1,5 +1,6 @@
 import { Sofa, Car, Sparkles, Heart } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { services as servicePages } from "@/data/services";
 
 const Services = () => {
   const services = [
@@ -59,6 +60,24 @@ const Services = () => {
               </Card>
             );
           })}
+        </div>
+
+        <div className="mt-12 max-w-3xl mx-auto">
+          <h3 className="text-xl font-bold text-foreground mb-4 text-center">
+            Подробно за услугите ни във Велико Търново
+          </h3>
+          <ul className="grid sm:grid-cols-2 gap-3">
+            {servicePages.map((page) => (
+              <li key={page.slug}>
+                <a
+                  href={`/${page.slug}`}
+                  className="text-primary hover:underline font-medium"
+                >
+                  {page.navLabel}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

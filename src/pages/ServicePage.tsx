@@ -133,27 +133,30 @@ const ServicePage = () => {
             </ul>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-              Ориентировъчни цени
-            </h2>
-            <Card className="border-2 rounded-2xl">
-              <CardContent className="p-6">
-                <ul className="space-y-3">
-                  {service.priceItems.map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-foreground/80">
-                      <Check className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <p className="text-sm text-muted-foreground mt-4">
-                  Посочените цени са ориентировъчни диапазони. Точна цена ви даваме след
-                  оглед на място или след като ни изпратите подробности и снимки.
-                </p>
-              </CardContent>
-            </Card>
-          </section>
+          {service.priceItems && (
+            <section className="mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                Ориентировъчни цени
+              </h2>
+              <Card className="border-2 rounded-2xl">
+                <CardContent className="p-6">
+                  <ul className="space-y-3">
+                    {service.priceItems.map((item) => (
+                      <li key={item} className="flex items-start gap-3 text-foreground/80">
+                        <Check className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="text-sm text-muted-foreground mt-4">
+                    Посочените цени са ориентировъчни диапазони. Точна цена ви даваме след
+                    оглед на място или след като ни изпратите подробности и снимки.
+                  </p>
+                </CardContent>
+              </Card>
+            </section>
+          )}
+
 
           <section className="mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">

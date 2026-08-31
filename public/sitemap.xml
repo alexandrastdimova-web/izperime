@@ -25,4 +25,19 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://izperime.com/pochistvane-podhranvane-kozheni-saloni-veliko-tarnovo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://izperime.com/interioren-detailing-veliko-tarnovo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://izperime.com/detailing-luksozni-avtomobili-veliko-tarnovo</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

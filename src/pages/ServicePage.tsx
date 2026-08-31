@@ -61,6 +61,16 @@ const ServicePage = () => {
     ],
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: service.faq.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer },
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
@@ -73,6 +83,7 @@ const ServicePage = () => {
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
       <header className="sticky top-0 z-50 w-full bg-background border-b border-border shadow-sm">
@@ -133,27 +144,30 @@ const ServicePage = () => {
             </ul>
           </section>
 
-          <section className="mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-              Ориентировъчни цени
-            </h2>
-            <Card className="border-2 rounded-2xl">
-              <CardContent className="p-6">
-                <ul className="space-y-3">
-                  {service.priceItems.map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-foreground/80">
-                      <Check className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <p className="text-sm text-muted-foreground mt-4">
-                  Посочените цени са ориентировъчни диапазони. Точна цена ви даваме след
-                  оглед на място или след като ни изпратите подробности и снимки.
-                </p>
-              </CardContent>
-            </Card>
-          </section>
+          {service.priceItems && (
+            <section className="mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                Ориентировъчни цени
+              </h2>
+              <Card className="border-2 rounded-2xl">
+                <CardContent className="p-6">
+                  <ul className="space-y-3">
+                    {service.priceItems.map((item) => (
+                      <li key={item} className="flex items-start gap-3 text-foreground/80">
+                        <Check className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="text-sm text-muted-foreground mt-4">
+                    Посочените цени са ориентировъчни диапазони. Точна цена ви даваме след
+                    оглед на място или след като ни изпратите подробности и снимки.
+                  </p>
+                </CardContent>
+              </Card>
+            </section>
+          )}
+
 
           <section className="mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">

@@ -83,10 +83,6 @@ const ServiceCards = () => {
           <h2 className="mt-4 font-display text-[2.1rem] font-extrabold leading-[1.08] text-ink text-balance sm:text-[2.9rem]">
             Изберете какво да изперем
           </h2>
-          <p className="mt-5 text-lg leading-relaxed text-ink-soft">
-            Всяка услуга има отделна страница с подробности, ориентировъчни цени и
-            отговори на често задаваните въпроси.
-          </p>
         </div>
 
         <ul className="mt-14 grid gap-x-14 gap-y-12 border-t border-ink/10 pt-12 md:grid-cols-2">

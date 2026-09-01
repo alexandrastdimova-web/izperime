@@ -76,11 +76,11 @@ const ServiceCards = () => {
   return (
     <section id="services" className="bg-cream py-20 md:py-32">
       <div className="mx-auto max-w-[1240px] px-5 lg:px-8">
-        <div className="mt-12 border-t border-ink/10 pt-10">
+        <div className="mt-2 border-t border-ink/10 pt-6">
           <span className="text-[13px] font-semibold uppercase tracking-[0.18em] text-ink-soft">
             Още услуги
           </span>
-          <ul className="mt-8 -mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 sm:mx-0 sm:grid sm:grid-cols-3 sm:gap-6 sm:overflow-visible sm:px-0 sm:pb-0">
+          <ul className="mt-0 -mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-4 sm:mx-0 sm:grid sm:grid-cols-3 sm:gap-6 sm:overflow-visible sm:px-0 sm:pb-0">
             {secondaryServices.map((service) => (
               <li key={service.slug} className="min-w-[62%] shrink-0 snap-center sm:min-w-0">
                 <Link

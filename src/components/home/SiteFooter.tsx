@@ -19,9 +19,6 @@ const SiteFooter = () => {
             >
               +359 884 555 884
             </a>
-            <p className="mt-2 text-[15px] text-ink-soft">
-              гр. Велико Търново, ж.к. Бузлуджа, ул. Георги Измирлиев 17
-            </p>
             <img
               src="/izperime-profesionalno-prane-veliko-tarnovo.jpg"
               alt="Професионално пране на дивани, матраци и автомобилни салони във Велико Търново – Изпери.me"
@@ -57,7 +54,6 @@ const SiteFooter = () => {
             &copy; {new Date().getFullYear()} izperi<span className="font-semibold">.me</span> — Всички
             права запазени
           </p>
-          <p>Велико Търново и региона</p>
         </div>
       </div>
     </footer>

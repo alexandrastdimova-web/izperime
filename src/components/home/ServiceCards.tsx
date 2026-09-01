@@ -129,7 +129,7 @@ const ServiceCards = () => {
           </h2>
         </div>
 
-        <ul className="mt-14 grid gap-x-14 gap-y-12 border-t border-ink/10 pt-12 md:grid-cols-2">
+        <ul className="mt-10 grid gap-x-14 gap-y-12 border-t border-ink/10 pt-12 md:grid-cols-2">
           {mainServices.map((service) => (
             <li key={service.slug}>
               <h3 className="font-display text-[1.4rem] font-extrabold leading-tight text-ink sm:text-[1.6rem]">

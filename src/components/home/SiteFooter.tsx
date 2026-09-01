@@ -22,6 +22,15 @@ const SiteFooter = () => {
             <p className="mt-2 text-[15px] text-ink-soft">
               гр. Велико Търново, ж.к. Бузлуджа, ул. Георги Измирлиев 17
             </p>
+            <img
+              src="/izperime-profesionalno-prane-veliko-tarnovo.jpg"
+              alt="Професионално пране на дивани, матраци и автомобилни салони във Велико Търново – Изпери.me"
+              width={1200}
+              height={630}
+              loading="lazy"
+              className="mt-6 w-full max-w-sm rounded-2xl"
+            />
+
           </div>
 
           <nav aria-label="Услуги">

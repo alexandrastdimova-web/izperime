@@ -11,6 +11,8 @@ import FactsSection from "@/components/home/FactsSection";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { scrollToSection } from "@/lib/scrollToSection";
+import { Link } from "react-router-dom";
+import { ArrowUpRight } from "lucide-react";
 import { secondaryServices } from "@/components/home/ServiceCards";
 
 const Index = () => {

@@ -13,7 +13,19 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        display: ["Golos Text", "ui-sans-serif", "system-ui", "sans-serif"],
+        sans: ["Onest", "ui-sans-serif", "system-ui", "sans-serif"],
+      },
       colors: {
+        ink: {
+          DEFAULT: "hsl(var(--ink))",
+          soft: "hsl(var(--ink-soft))",
+        },
+        cream: "hsl(var(--cream))",
+        sand: "hsl(var(--sand))",
+        paper: "hsl(var(--paper))",
+
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

@@ -8,8 +8,18 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 45 100% 95%;
-    --foreground: 0 0% 0%;
+    --background: 44 56% 97%;
+    --foreground: 220 10% 9%;
+
+    --ink: 220 10% 9%;
+    --ink-soft: 220 8% 26%;
+    --cream: 44 56% 97%;
+    --sand: 42 40% 92%;
+    --paper: 0 0% 100%;
+
+    --shadow-soft: 0 2px 8px -2px hsl(220 10% 9% / 0.06), 0 12px 32px -12px hsl(220 10% 9% / 0.10);
+    --shadow-lift: 0 8px 20px -6px hsl(220 10% 9% / 0.10), 0 28px 60px -24px hsl(220 10% 9% / 0.18);
+
 
     --card: 0 0% 100%;
     --card-foreground: 0 0% 0%;
@@ -99,7 +109,31 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
+    font-family: "Onest", ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: "Golos Text", ui-sans-serif, system-ui, sans-serif;
+    letter-spacing: -0.02em;
   }
 }
+
+@layer utilities {
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  .shadow-lift {
+    box-shadow: var(--shadow-lift);
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+

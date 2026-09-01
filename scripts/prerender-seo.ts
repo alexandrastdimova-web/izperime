@@ -81,6 +81,12 @@ for (const service of services) {
     `<meta data-rh="true" property="og:description" content="${escapeAttr(service.description)}" />`,
     `<meta data-rh="true" property="og:url" content="${url}" />`,
     `<meta data-rh="true" property="og:type" content="website" />`,
+    `<meta data-rh="true" property="og:site_name" content="izperi.me" />`,
+    `<meta data-rh="true" property="og:locale" content="bg_BG" />`,
+    `<meta data-rh="true" property="og:image" content="${SITE_URL}/og-image.jpg" />`,
+    `<meta data-rh="true" property="og:image:width" content="1200" />`,
+    `<meta data-rh="true" property="og:image:height" content="630" />`,
+    `<meta data-rh="true" name="twitter:image" content="${SITE_URL}/og-image.jpg" />`,
     `<script data-rh="true" type="application/ld+json">${escapeJson(serviceSchema)}</script>`,
     `<script data-rh="true" type="application/ld+json">${escapeJson(breadcrumbSchema)}</script>`,
     `<script data-rh="true" type="application/ld+json">${escapeJson(faqSchema)}</script>`,
@@ -92,7 +98,11 @@ for (const service of services) {
     .replace(/<title>[\s\S]*?<\/title>\s*/i, "")
     .replace(/<meta\s+name="description"[^>]*>\s*/i, "")
     .replace(/<link\s+rel="canonical"[^>]*>\s*/i, "")
-    .replace(/<meta\s+property="og:(?:title|description|url|type|image)"[^>]*>\s*/gi, "")
+    .replace(
+      /<meta\s+property="og:(?:title|description|url|type|site_name|locale|image|image:width|image:height)"[^>]*>\s*/gi,
+      "",
+    )
+    .replace(/<meta\s+name="twitter:image"[^>]*>\s*/gi, "")
     .replace(
       /<script\s+type="application\/ld\+json">[\s\S]*?<\/script>\s*/gi,
       "",

@@ -74,7 +74,7 @@ const mainServices = [
 
 const ServiceCards = () => {
   return (
-    <section id="services" className="bg-cream py-20 md:py-32">
+    <section id="services" className="bg-cream py-10 md:py-14">
       <div className="mx-auto max-w-[1240px] px-5 lg:px-8">
         <div className="mt-2 border-t border-ink/10 pt-6">
           <span className="text-[13px] font-semibold uppercase tracking-[0.18em] text-ink-soft">
@@ -129,7 +129,7 @@ const ServiceCards = () => {
           </h2>
         </div>
 
-        <ul className="mt-14 grid gap-x-14 gap-y-12 border-t border-ink/10 pt-12 md:grid-cols-2">
+        <ul className="mt-10 grid gap-x-14 gap-y-12 border-t border-ink/10 pt-12 md:grid-cols-2">
           {mainServices.map((service) => (
             <li key={service.slug}>
               <h3 className="font-display text-[1.4rem] font-extrabold leading-tight text-ink sm:text-[1.6rem]">

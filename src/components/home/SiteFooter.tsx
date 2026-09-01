@@ -54,7 +54,6 @@ const SiteFooter = () => {
             &copy; {new Date().getFullYear()} izperi<span className="font-semibold">.me</span> — Всички
             права запазени
           </p>
-          <p>Велико Търново и региона</p>
         </div>
       </div>
     </footer>

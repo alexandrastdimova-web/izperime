@@ -115,6 +115,10 @@ const ServiceCards = () => {
             ))}
           </ul>
         </div>
+        <p className="mt-2 text-center text-[13px] text-muted-foreground">
+          Велико Търново и региона | ул. Георги Измирлиев 17
+        </p>
+
 
         <div className="max-w-2xl">
           <span className="text-[13px] font-semibold uppercase tracking-[0.18em] text-ink-soft">

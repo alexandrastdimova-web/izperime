@@ -13,7 +13,7 @@ type MainService = {
   alt: string;
 };
 
-const secondaryServices: MainService[] = [
+export const secondaryServices: MainService[] = [
   {
     title: "Пране на мека мебел",
     slug: "prane-na-meka-mebel-veliko-tarnovo",

@@ -74,7 +74,7 @@ const mainServices = [
 
 const ServiceCards = () => {
   return (
-    <section id="services" className="bg-cream py-20 md:py-32">
+    <section id="services" className="bg-cream py-10 md:py-14">
       <div className="mx-auto max-w-[1240px] px-5 lg:px-8">
         <div className="mt-2 border-t border-ink/10 pt-6">
           <span className="text-[13px] font-semibold uppercase tracking-[0.18em] text-ink-soft">
